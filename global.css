@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    color-scheme: light dark;
+    --bg: #ccc;
+    --bg2: #a8a8a8;
+    --bg2-rev: #575757;
+    --card-bg: #e8e8e8;
+    --text: #181818;
+    --heading: #6028d0;
+    --footer-bg: #f2a;
+    --footer-text: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #333333;
+        --bg2: #575757;
+        --bg2-rev: #a8a8a8;
+        -card-bg: #171717;
+        --text: #e7e7e7;
+        --heading: #a060ff;
+        --footer-bg: #d06;
+        --footer-text: #000;
+    }
+}
+
+body {
+    user-select: none;
+    transition: background 0.25s ease-in-out, color 0.25s ease-in-out;
+    background: linear-gradient(0.125turn, var(--heading), var(--bg2), var(--bg));
+    color: var(--text);
+    font-family: 'メイリオ', Meiryo, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', Arial, sans-serif;
+    margin: 30px 0 0 0;
+    min-height: calc(100vh - 80px);
+    position: relative;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+.intro-container {
+    transition:
+        background 0.25s ease-in-out,
+        border-left-color 0.25s ease-in-out,
+        border-bottom-color 0.25s ease-in-out,
+        border-top-color 0.25s ease-in-out,
+        border-right-color 0.25s ease-in-out;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border-width: 3px;
+    border-style: solid;
+    border-left-color: var(--bg2-rev);
+    border-bottom-color: var(--bg2-rev);
+    border-top-color: var(--heading);
+    border-right-color: var(--heading);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    width: auto;
+    max-width: 80vw;
+    margin: 0 auto;
+    padding: 20px 12px;
+    box-sizing: border-box;
+}
+
+h1 {
+    transition: color 0.25s ease-in-out;
+    color: var(--heading);
+    font-size: 1.4em;
+    margin-bottom: 0.4em;
+}
+
+h2 {
+    transition: color 0.25s ease-in-out;
+    color: var(--heading);
+    font-size: 1.2em;
+    margin-bottom: 0.3em;
+}
+
+.title {
+    margin-left: 2vw;
+}
+
+ul {
+    padding-left: 1.2em;
+}
+
+.footer {
+    transition: background 0.25s ease-in-out, color 0.25s ease-in-out;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background: linear-gradient(0.25turn, #f08, #9858ff, var(--footer-bg));
+    color: var(--footer-text);
+    text-align: center;
+    padding: 14px 0;
+    font-size: 0.95em;
+    letter-spacing: 0.05em;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+@media (max-width: 400px) {
+    .intro-container {
+        max-width: 96vw;
+        padding: 10px 2vw;
+    }
+}
