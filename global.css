@@ -93,7 +93,7 @@ ul {
 }
 
 .footer {
-    transition: background 0.25s ease-in-out, color 0.25s ease-in-out;
+    transition: background 0.25s ease-in-out;
     position: fixed;
     left: 0;
     bottom: 0;
