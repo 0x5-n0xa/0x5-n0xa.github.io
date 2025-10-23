@@ -16,7 +16,7 @@ body {
     --bg2-rev: #575757;
     --card-bg: #e8e8e8;
     --text: #181818;
-    --heading: #6028d0;
+    --heading: #b088ff;
     --footer-bg: #f2a;
     --footer-text: #fff;
 }
@@ -28,7 +28,7 @@ body {
         --bg2-rev: #a8a8a8;
         --card-bg: #171717;
         --text: #e7e7e7;
-        --heading: #a060ff;
+        --heading: #6028d0;
         --footer-bg: #d06;
         --footer-text: #000;
     }
