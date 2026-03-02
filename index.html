@@ -34,68 +34,6 @@
         <a href="https://n0xa.f5.si" target="_blank">n0xa is here.</a>
     </div>
 
-    <!-- Legacy browser detection: runs only when type="module" is unsupported -->
-    <script nomodule>
-        document.documentElement.setAttribute('data-env', 'legacy');
-    </script>
-
-    <div class="fallback-overlay" id="fallbackOverlay" hidden>
-        <div class="intro-container fallback-container">
-            <h1 id="fallbackTitle">⚠️ Your browser is not supported</h1>
-            <p id="fallbackDesc"></p>
-            <p id="fallbackDesc2"></p>
-            <ul id="fallbackList"></ul>
-        </div>
-    </div>
-
-    <noscript>
-        <style>.fallback-overlay { display: flex !important; }</style>
-        <div class="fallback-overlay" style="display:flex">
-            <div class="intro-container fallback-container">
-                <h1>⚠️ JavaScript is disabled</h1>
-                <p>This site requires JavaScript to display correctly.</p>
-                <p>Please enable JavaScript in your browser settings.</p>
-            </div>
-        </div>
-    </noscript>
-
-    <script>
-        (function () {
-            var overlay = document.getElementById('fallbackOverlay');
-            var title   = document.getElementById('fallbackTitle');
-            var desc    = document.getElementById('fallbackDesc');
-            var desc2   = document.getElementById('fallbackDesc2');
-            var list    = document.getElementById('fallbackList');
-            var browsers = [
-                'Microsoft Edge (latest)',
-                'Google Chrome (latest)',
-                'Mozilla Firefox (latest)',
-                'Apple Safari (latest)'
-            ];
-
-            function showFallback(titleText, d1, d2, items) {
-                title.textContent = titleText;
-                desc.textContent  = d1;
-                desc2.textContent = d2;
-                var html = '';
-                for (var i = 0; i < items.length; i++) {
-                    html += '<li>' + items[i] + '</li>';
-                }
-                list.innerHTML = html;
-                overlay.hidden = false;
-            }
-
-            if (document.documentElement.getAttribute('data-env') === 'legacy') {
-                showFallback(
-                    '⚠️ Your browser is not supported',
-                    'This site does not support Internet Explorer or legacy browsers.',
-                    'Please use one of the following browsers.',
-                    browsers
-                );
-            }
-        })();
-    </script>
-
     <footer class="footer">
         Copyright (c) 2025 - 2026 0x5 All rights reserved.
     </footer>

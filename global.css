@@ -312,23 +312,6 @@ a:active {
     background: var(--fill-press);
 }
 
-/* ───── フォールバック (JS無効・レガシーブラウザ) ───── */
-.fallback-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    background: var(--bg-mica);
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.fallback-container {
-    animation: none;
-}
-
 /* ───── フッター ───── */
 .footer {
     position: fixed;
